@@ -1,0 +1,16 @@
+{
+  "name": "twitter-stream",
+  "version": "1.0.0",
+  "description": "pull in data from twitter and emit it",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "author": "Jon Hunter",
+  "license": "ISC",
+  "dependencies": {
+    "hmacsha1": "^1.0.0",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4"
+  }
+}
