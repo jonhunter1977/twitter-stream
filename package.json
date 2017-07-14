@@ -4,7 +4,9 @@
   "description": "pull in data from twitter and emit it",
   "main": "index.js",
   "scripts": {
-    "test": "yarn test"
+    "test": "yarn test",
+    "run": "node index.js",
+    "debug": "NODE_DEBUG=request node index.js"
   },
   "author": "Jon Hunter",
   "license": "ISC",
