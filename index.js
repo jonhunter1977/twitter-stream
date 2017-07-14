@@ -15,7 +15,7 @@ statusSampleStream
       const jsonData = JSON.parse(twitterData);
       if (jsonData.text) {
         console.log(jsonData.text);
-        socketServer.broadcast(jsonData.text);
+        socketServer.broadcast(jsonData);
       }
     } catch (e) {
       // console.error('Unable to parse data');
