@@ -1,14 +1,6 @@
 'use strict';
 
-// const getAccessToken = require('./lib/twitter').getAccessToken;
-//
-// getAccessToken()
-//   .then((getAccessTokenResult) => {
-//     console.log(getAccessTokenResult);
-//   })
-//   .catch((e) => {
-//     console.log(e);
-//   });
+const socketServer = require('./lib/socketServer');
 
 const getStatusesSample = require('./lib/twitter').getStatusesSample;
 
@@ -21,7 +13,10 @@ statusSampleStream
     const twitterData  = data.toString('UTF8');
     try {
       const jsonData = JSON.parse(twitterData);
-      if (jsonData.text) console.log(jsonData.text);
+      if (jsonData.text) {
+        console.log(jsonData.text);
+        socketServer.broadcast(jsonData.text);
+      }
     } catch (e) {
       // console.error('Unable to parse data');
     }
